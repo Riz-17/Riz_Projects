@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RizLibrary | Digital Knowledge Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<header>
+    <a class="logo" href="#" onclick="showPage('home')">
+        RIZ<span>LIBRARY</span>
+    </a>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('library')">Library</a>
+        <a href="#" onclick="showPage('categories')">Categories</a>
+        <a href="#" onclick="showPage('languages')">Languages</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <button class="account" onclick="showPage('account')">
+        Account
+    </button>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <div class="badge">✦ NEXT GENERATION DIGITAL LIBRARY</div>
+
+            <h1>
+                ENTER THE
+                <span>KNOWLEDGE</span>
+                UNIVERSE.
+            </h1>
+
+            <p>
+                Discover hundreds of books covering programming,
+                artificial intelligence, science, history, business,
+                mathematics and much more.
+            </p>
+
+            <div class="buttons">
+
+                <button class="primary"
+                        onclick="showPage('library')">
+                    EXPLORE LIBRARY →
+                </button>
+
+                <button class="secondary"
+                        onclick="showPage('categories')">
+                    VIEW CATEGORIES
+                </button>
+
+            </div>
+
+            <div class="stats">
+
+                <div>
+                    <b id="bookCount">500+</b>
+                    <small>Books</small>
+                </div>
+
+                <div>
+                    <b>50+</b>
+                    <small>Languages</small>
+                </div>
+
+                <div>
+                    <b>10</b>
+                    <small>Subjects</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hologram">
+
+            <div class="orbit"></div>
+
+            <div class="cube">
+                📚
+            </div>
+
+            <h2>RIZLIBRARY</h2>
+            <p>READ • LEARN • BUILD</p>
+
+        </div>
+
+    </div>
+
+    <div class="quote">
+        “Knowledge becomes powerful when you keep exploring.”
+    </div>
+
+</section>
+
+
+
+<!-- LIBRARY -->
+
+<section id="library" class="page">
+
+    <div class="heading">
+        <div>
+            <div class="badge">DIGITAL ARCHIVE</div>
+            <h2>Explore Library</h2>
+        </div>
+
+        <span id="results"></span>
+    </div>
+
+
+    <div class="search-area">
+
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="🔎 Search books, subjects, authors..."
+            oninput="searchBooks()"
+        >
+
+        <select id="categorySelect"
+                onchange="filterBooks(this.value)">
+
+            <option value="All">
+                All Categories
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div id="bookGrid" class="book-grid"></div>
+
+</section>
+
+
+
+<!-- CATEGORIES -->
+
+<section id="categories" class="page">
+
+    <div class="heading">
+        <div>
+            <div class="badge">KNOWLEDGE ZONES</div>
+            <h2>Choose Your Subject</h2>
+        </div>
+    </div>
+
+    <div id="categoryGrid"
+         class="category-grid">
+    </div>
+
+</section>
+
+
+
+<!-- LANGUAGES -->
+
+<section id="languages" class="page">
+
+    <div class="heading">
+
+        <div>
+            <div class="badge">GLOBAL COLLECTION</div>
+            <h2>Languages</h2>
+        </div>
+
+    </div>
+
+    <div id="languageGrid"
+         class="language-grid">
+    </div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about" class="page">
+
+    <div class="about">
+
+        <div class="owner-photo">
+
+            <img src="owner.jpg"
+                 alt="Owner">
+
+        </div>
+
+        <div>
+
+            <div class="badge">
+                ABOUT RIZLIBRARY
+            </div>
+
+            <h2>
+                Built For Curious Minds.
+            </h2>
+
+            <p>
+                RizLibrary is a futuristic digital
+                knowledge platform created to make
+                learning immersive and accessible.
+            </p>
+
+            <p>
+                Explore technology, science, history,
+                mathematics, business and engineering
+                through an organized digital collection.
+            </p>
+
+            <button class="primary"
+                    onclick="showPage('library')">
+                ENTER LIBRARY →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="page">
+
+    <div class="contact">
+
+        <div>
+
+            <div class="badge">
+                CONNECT WITH US
+            </div>
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a question or suggestion?
+                Send us a message.
+            </p>
+
+            <div class="phone">
+                📞 7569722683
+                <small>Customer Support</small>
+            </div>
+
+        </div>
+
+
+        <form onsubmit="sendMessage(event)">
+
+            <input required
+                   placeholder="Your Name">
+
+            <input required
+                   type="email"
+                   placeholder="Email Address">
+
+            <textarea required
+                      placeholder="Your Message"></textarea>
+
+            <button class="primary">
+                SEND MESSAGE →
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ACCOUNT -->
+
+<section id="account" class="page">
+
+    <div class="auth">
+
+        <div class="badge">
+            MEMBER ACCESS
+        </div>
+
+        <h2>Welcome Back</h2>
+
+        <div class="tabs">
+
+            <button onclick="loginTab()"
+                    id="loginTab"
+                    class="selected">
+                Login
+            </button>
+
+            <button onclick="registerTab()"
+                    id="registerTab">
+                Register
+            </button>
+
+        </div>
+
+
+        <form id="loginForm"
+              onsubmit="login(event)">
+
+            <input required
+                   type="email"
+                   placeholder="Email">
+
+            <input required
+                   type="password"
+                   placeholder="Password">
+
+            <label>
+                <input type="checkbox">
+                Remember me
+            </label>
+
+            <button class="primary">
+                LOGIN
+            </button>
+
+            <p id="loginMessage"></p>
+
+            <a href="#"
+               onclick="registerTab();return false;">
+                Not a member yet? Register now
+            </a>
+
+        </form>
+
+
+        <form id="registerForm"
+              class="hidden"
+              onsubmit="register(event)">
+
+            <input required
+                   placeholder="Full Name">
+
+            <input required
+                   type="email"
+                   placeholder="Email">
+
+            <input required
+                   type="password"
+                   placeholder="Create Password">
+
+            <button class="primary">
+                CREATE ACCOUNT
+            </button>
+
+            <p id="registerMessage"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- BOOK READER -->
+
+<section id="reader" class="page">
+
+    <div class="reader">
+
+        <button class="back"
+                onclick="showPage('library')">
+            ← BACK TO LIBRARY
+        </button>
+
+        <div class="reader-head">
+
+            <img id="readerImage">
+
+            <div>
+
+                <div class="badge">
+                    DIGITAL EDITION
+                </div>
+
+                <h2 id="readerTitle">
+                    Book
+                </h2>
+
+                <span id="pageNumber">
+                    Page 1 / 20
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <article id="readerContent"></article>
+
+
+        <div class="reader-controls">
+
+            <button class="secondary"
+                    onclick="previousPage()">
+                ← Previous
+            </button>
+
+            <span id="pageDots"></span>
+
+            <button class="primary"
+                    onclick="nextPage()">
+                Next →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 RizLibrary • Digital Knowledge Universe
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

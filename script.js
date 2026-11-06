@@ -1,13 +1,44 @@
-const P=[
-['Pixel Pro 10','Google','Mobile Phones',69999,'phone mobile android pixel','https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'],['Galaxy S26','Samsung','Mobile Phones',79999,'phone mobile samsung android','https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=800&q=80'],['iPhone 17','Apple','Mobile Phones',84999,'iphone phone mobile apple','https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80'],['Nord Pro','OnePlus','Mobile Phones',44999,'phone mobile oneplus','https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&w=800&q=80'],['Vivo V40','Vivo','Mobile Phones',32999,'phone mobile vivo','https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80'],['Moto Edge','Motorola','Mobile Phones',29999,'phone mobile motorola','https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'],['HP Victus 15','HP','Laptops',74999,'laptop notebook computer hp gaming','https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=800&q=80'],['ASUS TUF Gaming A15','ASUS','Laptops',89999,'laptop notebook computer asus gaming','https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80'],['Lenovo LOQ 15','Lenovo','Laptops',82999,'laptop notebook computer lenovo gaming','https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80'],['Dell Inspiron 14','Dell','Laptops',67999,'laptop notebook computer dell','https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80'],['Acer Aspire 5','Acer','Laptops',55999,'laptop notebook computer acer','https://images.unsplash.com/photo-1484788984921-03950022c9ef?auto=format&fit=crop&w=800&q=80'],['ASUS Vivobook 16','ASUS','Laptops',64999,'laptop notebook computer asus','https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80'],['Classic Everyday Hoodie','Riz Studio','Clothing',1499,'hoodie sweatshirt clothes','https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80'],['Everyday Cotton T-Shirt','Riz Studio','Clothing',899,'tshirt t shirt tee clothes','https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80'],['Oxford Casual Shirt','Riz Studio','Clothing',1599,'shirt clothes','https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80'],['Relaxed Denim Jeans','Riz Studio','Clothing',1999,'jeans denim clothes','https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80'],['Daily Layer Jacket','Riz Studio','Clothing',2499,'jacket clothes','https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80'],['Studio Wireless Earbuds','Soundcore','Audio',3999,'earbuds wireless bluetooth audio','https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80'],['AirBeat Pro Buds','Soundcore','Audio',5999,'earbuds wireless bluetooth','https://images.unsplash.com/photo-1608556934051-0a2f9c4a3f50?auto=format&fit=crop&w=800&q=80'],['Quiet Over-Ear Headphones','AudioLab','Audio',7999,'headphones wireless audio','https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'],['Studio Monitor Headphones','AudioLab','Audio',6499,'headphones wired audio','https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80'],['Everyday Runner','Stride','Shoes',2999,'shoes sneakers footwear','https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80'],['Court Classic Sneakers','Stride','Shoes',3499,'shoes sneakers footwear','https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80'],['Minimal Leather Watch','Riz Time','Watches',2499,'watch watches time','https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80'],['Urban Steel Watch','Riz Time','Watches',3999,'watch watches time','https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80'],['Good Errands Tote','Riz Studio','Bags',1799,'bag tote bags','https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80'],['Daily Laptop Backpack','Riz Studio','Bags',2299,'bag backpack laptop bags','https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80'],['65W Fast Charger','Volt','Accessories',1499,'charger charging accessory laptop phone','https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80'],['10000mAh Power Bank','Volt','Accessories',1299,'power bank charger accessory','https://images.unsplash.com/photo-1609592424635-fbdb0d1a44aa?auto=format&fit=crop&w=800&q=80'],['Wireless Mouse','DeskLab','Accessories',999,'mouse computer laptop accessory','https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80'],['Mechanical Keyboard','DeskLab','Accessories',2999,'keyboard computer laptop accessory','https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80'],['USB-C Braided Cable','Volt','Accessories',499,'cable usb charger accessory','https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80']].map((x,i)=>({id:i+1,name:x[0],brand:x[1],cat:x[2],price:x[3],tags:x[4],img:x[5],rating:(4.4+(i%6)/10).toFixed(1)}));
-let cart=JSON.parse(localStorage.rizCart||'[]'),list=[...P],cat='All';const $=s=>document.querySelector(s),money=n=>'₹'+n.toLocaleString('en-IN');
-function render(){let a=list;$('#grid').innerHTML=a.length?a.map(p=>`<article class="card" onclick="detail(${p.id})"><div class="pic"><img src="${p.img}" alt="${p.name}"></div><div class="info"><h3>${p.name}</h3><div class="meta">${p.brand} · ${p.cat} · ★ ${p.rating}</div><div class="price">${money(p.price)}</div></div></article>`).join(''):'<p>No products found.</p>';$('#title').textContent=cat==='All'?'The edit':cat}
-function filter(c='All',q=''){cat=c;let s=q.trim().toLowerCase();list=P.filter(p=>(c==='All'||p.cat===c)&&(!s||[p.name,p.brand,p.cat,p.tags].join(' ').toLowerCase().includes(s)));render()}
-function detail(id){let p=P.find(x=>x.id===id);$('#detail').innerHTML=`<div class="detail"><img src="${p.img}"><div><p>${p.cat.toUpperCase()} · ${p.brand.toUpperCase()}</p><h2>${p.name}</h2><b>${money(p.price)}</b><p class="desc">A carefully selected everyday essential with a clean, dependable design. Add it to your bag and make it part of your edit.</p><button class="primary full" onclick="add(${p.id})">ADD TO BAG →</button></div></div>`;open('#modal')}
-function add(id){let x=cart.find(a=>a.id===id);x?x.qty++:cart.push({id,qty:1});save();close('#modal');open('#drawer')}
-function save(){localStorage.rizCart=JSON.stringify(cart);bag()}
-function bag(){let n=cart.reduce((a,x)=>a+x.qty,0);$('#count').textContent=n;let sub=0;$('#cart').innerHTML=cart.length?cart.map(x=>{let p=P.find(a=>a.id===x.id);sub+=p.price*x.qty;return `<div class="line"><img src="${p.img}"><div><h4>${p.name}</h4><small>${money(p.price)}</small><div class="qty"><button onclick="qty(${p.id},-1)">−</button>${x.qty}<button onclick="qty(${p.id},1)">+</button></div><button class="remove" onclick="removeItem(${p.id})">Remove</button></div></div>`}).join(''):'<p>Your bag is waiting for something good.</p>';let sh=sub>=1500?0:99;$('#sub').textContent=money(sub);$('#ship').textContent=sh?money(sh):'FREE';$('#total').textContent=money(sub+sh)}
-function qty(id,n){let x=cart.find(a=>a.id===id);x.qty+=n;if(x.qty<1)cart=cart.filter(a=>a.id!==id);save()}function removeItem(id){cart=cart.filter(a=>a.id!==id);save()}
-function open(s){$(s).classList.add('show');$('#shade').classList.add('show')}function close(s){$(s).classList.remove('show');if(!document.querySelector('.show'))$('#shade').classList.remove('show')}
-document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>filter(b.dataset.cat,''));$('#q').oninput=e=>filter('All',e.target.value);$('#bag').onclick=()=>{bag();open('#drawer')};document.querySelectorAll('.x').forEach(b=>b.onclick=()=>{document.querySelectorAll('#drawer,.modal').forEach(x=>x.classList.remove('show'));$('#shade').classList.remove('show')});$('#shade').onclick=()=>document.querySelectorAll('#drawer,.modal').forEach(x=>x.classList.remove('show'));
-$('#sort').onchange=e=>{let a=[...list];if(e.target.value==='low')a.sort((a,b)=>a.price-b.price);if(e.target.value==='high')a.sort((a,b)=>b.price-a.price);if(e.target.value==='rating')a.sort((a,b)=>b.rating-a.rating);list=a;render()};$('#checkout').onclick=()=>{if(!cart.length)return alert('Your bag is empty.');$('#checksum').innerHTML=`<p>Total: <b>${$('#total').textContent}</b></p>`;close('#drawer');open('#check')};$('#form').onsubmit=e=>{e.preventDefault();cart=[];save();close('#check');open('#success');e.target.reset()};render();bag();
+const form = document.getElementById("orderForm");
+
+form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const order = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        service_id: document.getElementById("service_id").value,
+        weight: document.getElementById("weight").value,
+        delivery_date: document.getElementById("delivery_date").value
+    };
+
+    const response = await fetch("/addOrder", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(order)
+    });
+
+    const result = await response.json();
+    alert(result.message);
+
+    form.reset();
+    loadOrders();
+});
+
+async function loadOrders() {
+    const response = await fetch("/orders");
+    const orders = await response.json();
+
+    document.getElementById("orders").innerHTML =
+        orders.map(order => `
+            <p>
+                ${order.name} |
+                ${order.service_name} |
+                ₹${order.total_amount} |
+                ${order.status}
+            </p>
+        `).join("");
+}
+
+loadOrders();
